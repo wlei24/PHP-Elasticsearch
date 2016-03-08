@@ -6,7 +6,7 @@
 <pre> $ unzip elasticsearch-{version}.zip</pre>
 #####4. 运行elasticsearch
 <pre>$ ./elasticsearch-{version}/bin/elasticsearch</pre>
-#####5. 测试elasticsearch运行情况
+#####5. 测试运行情况
 <pre>$ curl 127.0.0.1:9200/?pretty</pre>
 Notice - 正常可以看到以下返回信息：
 <pre>
