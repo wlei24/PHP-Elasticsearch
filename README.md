@@ -4,9 +4,9 @@
 2.下载<a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
 3.解压压缩包 $unzip elasticsearch-{version}.zip<br/>
 4.运行elasticsearch，$./elasticsearch-{version}/bin/elasticsearch<br/>
-5.测试elasticsearch运行情况，$curl 127.0.0.1:9200/?pretty<br/>
-可以看到以下返回信息：<br/>
+5.测试elasticsearch运行情况，$curl 127.0.0.1:9200/?pretty
 <pre>
+正常可以看到以下返回信息：
 {
   "name" : "Martinex",
   "cluster_name" : "elasticsearch",
