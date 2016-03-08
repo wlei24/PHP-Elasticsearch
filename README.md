@@ -23,4 +23,5 @@ Notice - 正常可以看到以下返回信息：
   "tagline" : "You Know, for Search"
 }
 </pre>
-### 参考书籍：Elasticsearch权威指南 - https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details
+
+<b>参考书籍：Elasticsearch权威指南 - https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details</b>
