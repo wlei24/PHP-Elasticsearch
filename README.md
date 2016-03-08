@@ -1,7 +1,7 @@
 # PHP-Elasticsearch
 ##部署准备
-1.安装新版<a href="http://www.java.com" target="_blank">java环境</a><br/>
-2.下载<a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
+1.安装新版 <a href="http://www.java.com" target="_blank">java环境</a><br/>
+2.下载 <a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
 3.解压压缩包 $unzip elasticsearch-{version}.zip<br/>
 4.运行elasticsearch，$./elasticsearch-{version}/bin/elasticsearch<br/>
 5.测试elasticsearch运行情况，$curl 127.0.0.1:9200/?pretty
