@@ -1,5 +1,5 @@
 # PHP-Elasticsearch
-##部署准备
+## 部署准备
 1. 安装新版 <a href="http://www.java.com" target="_blank">java环境</a><br/>
 2. 下载 <a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
 3. 解压压缩包
@@ -23,4 +23,4 @@ Notice - 正常可以看到以下返回信息：
   "tagline" : "You Know, for Search"
 }
 </pre>
-###参考书籍：Elasticsearch权威指南 - https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details
+### 参考书籍：Elasticsearch权威指南 - https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details
