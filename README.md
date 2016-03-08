@@ -24,4 +24,4 @@ Notice - 正常可以看到以下返回信息：
 }
 </pre>
 
-<b>参考书籍：Elasticsearch权威指南 - https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details</b>
+##<b>参考书籍：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>
