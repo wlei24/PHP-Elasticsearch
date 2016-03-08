@@ -1,5 +1,6 @@
 # PHP-Elasticsearch
-## 部署准备
+一套全文检索解决方案，涉及到的技术有elasticsearch、mongodb、php等。
+## Elasticsearch准备
 #####1. 安装新版 <a href="http://www.java.com" target="_blank">java环境</a><br/>
 #####2. 下载 <a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
 #####3. 解压压缩包
