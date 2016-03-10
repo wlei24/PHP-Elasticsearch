@@ -46,4 +46,21 @@ local    0.328GB
 </pre>
 同样你可以通过127.0.0.1:27017访问，页面显示:
 <pre>It looks like you are trying to access MongoDB over HTTP on the native driver port.</pre>
+## Mongo-Connector准备
+#####1. 下载[mongo-connector](https://github.com/mongodb-labs/mongo-connector)
+首先需要确保你已经安装pip，否则执行以下命令
+<pre>$ easy_install pip</pre>
+若已安装，执行以下命令
+<pre>pip install mongo-connector</pre>
+同样你也可以这样安装,下载完成后执行`sudo python setup.py install`
+<pre>
+git clone https://github.com/10gen-labs/mongo-connector.git
+cd mongo-connector
+python setup.py install
+</pre>
+#####2. 确保开启MongoDB复制集
+<pre>
+mongod --replSet myDevReplSet
+</pre>
+然后在mongodb控制台执行`rs.initiate()`
 #####<b>参考书籍：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>
