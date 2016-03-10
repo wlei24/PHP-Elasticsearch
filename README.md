@@ -84,8 +84,22 @@ Traceback (most recent call last):
     "vailable doc managers." % full_name)
 mongo_connector.errors.InvalidConfiguration: Could not import mongo_connector.doc_managers.elastic_doc_manager. It could be that this doc manager has been moved out of this project and is maintained elsewhere. Make sure that you have the doc manager installed alongside mongo-connector. Check the README for a list of available doc managers.
 </pre>
-花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的没有找到elastic_doc_manager
-不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir
-这是就需要你去[elastic2-doc-manager](https://github.com/mongodb-labs/elastic2-doc-manager)将elastic2-doc-manager.py拷贝到本地doc_manaers目录
+花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的没有找到elastic_doc_manager<br/>
+不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir<br/>
+这时就需要你去[elastic2-doc-manager](https://github.com/mongodb-labs/elastic2-doc-manager)<br/>
+将elastic2-doc-manager.py拷贝到本地doc_manaers目录<br/>
+继续执行之前命令，然后继续报错
+<pre>
+IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/doc_managers/mongo-connector.log'
+</pre>
+这个错误只需要根据报错信息，新建此文件，并赋予读写权限即可。<br/>
+继续执行之前命令，惊奇发现已经显示正常迹象，不过随即退出。解决此问题只需采用在命令前面加上`sudo`即可(意思你懂得~)
+<pre>Logging to mongo-connector.log.</pre>
 
-#####<b>参考书籍：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>
+## 总结
+<pre>
+1.遇到问题时，没有仔细查看错误信息。
+2.英文能力有待提高。
+</pre>
+
+#####<b>参考书籍：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>、[mongo-connector](https://github.com/mongodb-labs/mongo-connector/blob/master/README.rst)、[MongoDB 数据自动同步到 ElasticSearch](https://segmentfault.com/a/1190000003773614)
