@@ -25,7 +25,7 @@ Notice - 正常可以看到以下返回信息：
 }
 </pre>
 ## MongoDB准备
-#####1. 下载[MongoDB](http://www.mongodb.org/downloads)，也可以采用一下方式进行安装（linux下）
+#####1. 下载[MongoDB](http://www.mongodb.org/downloads)，也可以采用以下方式进行安装（linux下）
 <pre>$ brew install mongodb</pre>
 #####2. 解压压缩包到某个自定义目录下
 #####3. 进入解压目录,新建data目录，然后在data目录下新建db目录，用来存放mongodb数据
@@ -63,4 +63,29 @@ python setup.py install
 mongod --replSet myDevReplSet
 </pre>
 然后在mongodb控制台执行`rs.initiate()`
+#####3. 运行mongodb-connector(*)
+参考资料，执行
+<pre>mongo-connector -m 127.0.0.1:27017 -t 127.0.0.1:9200 -d elastic_doc_manager</pre>
+然后你会惊奇发现报了一大堆的错误
+<pre>
+No handlers could be found for logger "mongo_connector.util"
+Traceback (most recent call last):
+  File "/usr/local/bin/mongo-connector", line 9, in <module>
+    load_entry_point('mongo-connector==2.3', 'console_scripts', 'mongo-connector')()
+  File "/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/util.py", line 85, in wrapped
+    func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/connector.py", line 1041, in main
+    conf.parse_args()
+  File "/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/config.py", line 118, in parse_args
+    option, dict((k, values.get(k)) for k in option.cli_names))
+  File "/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/connector.py", line 824, in apply_doc_managers
+    module = import_dm_by_name(dm['docManager'])
+  File "/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/connector.py", line 814, in import_dm_by_name
+    "vailable doc managers." % full_name)
+mongo_connector.errors.InvalidConfiguration: Could not import mongo_connector.doc_managers.elastic_doc_manager. It could be that this doc manager has been moved out of this project and is maintained elsewhere. Make sure that you have the doc manager installed alongside mongo-connector. Check the README for a list of available doc managers.
+</pre>
+花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的没有找到elastic_doc_manager
+不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir
+这是就需要你去[elastic2-doc-manager](https://github.com/mongodb-labs/elastic2-doc-manager)将elastic2-doc-manager.py拷贝到本地doc_manaers目录
+
 #####<b>参考书籍：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>
