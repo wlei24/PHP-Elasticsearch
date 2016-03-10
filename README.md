@@ -3,7 +3,7 @@
 具体流程：<br/>
 1.PHP程序添加文章写入Mongodb中。<br/>
 2.通过mongodb-connector同步输入到elasticsearch中。<br/>
-3.PHP程序([elastic/elasticsearch-php](https://github.com/elastic/elasticsearch-php))全文检索elasticsearch。<br/>
+3.PHP程序([elasticsearch-php](https://github.com/elastic/elasticsearch-php))全文检索elasticsearch。<br/>
 ## Elasticsearch准备
 #####1. 安装新版 <a href="http://www.java.com" target="_blank">java环境</a><br/>
 #####2. 下载 <a href="http://www.elasticsearch.org/download" target="_blank">Elasticsearch</a><br/>
