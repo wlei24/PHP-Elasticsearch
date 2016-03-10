@@ -35,20 +35,20 @@ Notice - 正常可以看到以下返回信息：
 #####3. 进入解压目录,新建data目录，然后在data目录下新建db目录，用来存放mongodb数据
 #####4. 进入bin目录下，启动mongod,切记命令为
 <pre>$ ./mongod</pre>
-首次需配置mongdo数据存放位置
+首次需配置MongoDB数据存放位置
 <pre>$ sudo ./mongod --dbpath /Users/wlei24/es/mongodb-osx-x86_64-3.0.0/data/db/</pre>
 后面运行时可能出现
 <pre>ERROR：dbpath (/data/db) does not exist.</pre>
 这是由于mongod启动时没有找到mongodb.conf导致的，因此我们的启动mongodb的时候手动添加 --dbpath即可
-#####5. 测试mongodb运行情况
-进入bin目录，运行./mongo进入mongodb控制台，输入
+#####5. 测试MongoDB运行情况
+进入bin目录，运行 `./mongo` 进入mongodb控制台，输入
 <pre>$ show dbs</pre>
 显示结果：
 <pre>
 article  0.078GB
 local    0.328GB
 </pre>
-同样你可以通过127.0.0.1:27017访问，页面显示:
+同样你可以通过 `127.0.0.1:27017` 访问，页面显示:
 <pre>It looks like you are trying to access MongoDB over HTTP on the native driver port.</pre>
 ## Mongo-Connector准备
 #####1. 下载[mongo-connector](https://github.com/mongodb-labs/mongo-connector)
@@ -56,7 +56,7 @@ local    0.328GB
 <pre>$ easy_install pip</pre>
 若已安装，执行以下命令
 <pre>pip install mongo-connector</pre>
-同样你也可以这样安装,下载完成后执行`sudo python setup.py install`
+同样你也可以这样安装 - 下载完成后执行`sudo python setup.py install`
 <pre>
 git clone https://github.com/10gen-labs/mongo-connector.git
 cd mongo-connector
@@ -66,11 +66,10 @@ python setup.py install
 <pre>
 mongod --replSet myDevReplSet
 </pre>
-然后在mongodb控制台执行`rs.initiate()`
-#####3. 运行mongodb-connector(*)
-参考资料，执行
+接着在mongodb控制台执行 `rs.initiate()`
+#####3. 运行 `mongodb-connector`
 <pre>mongo-connector -m 127.0.0.1:27017 -t 127.0.0.1:9200 -d elastic_doc_manager</pre>
-然后你会惊奇发现报了一大堆的错误
+你会惊奇发现报了一大堆的错误
 <pre>
 No handlers could be found for logger "mongo_connector.util"
 Traceback (most recent call last):
@@ -88,11 +87,13 @@ Traceback (most recent call last):
     "vailable doc managers." % full_name)
 mongo_connector.errors.InvalidConfiguration: Could not import mongo_connector.doc_managers.elastic_doc_manager. It could be that this doc manager has been moved out of this project and is maintained elsewhere. Make sure that you have the doc manager installed alongside mongo-connector. Check the README for a list of available doc managers.
 </pre>
+<pre>
 花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的错误提示-没有找到elastic_doc_manager<br/>
 不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir<br/>
+</pre>
 这时就需要你去[elastic2-doc-manager](https://github.com/mongodb-labs/elastic2-doc-manager)<br/>
 将elastic2-doc-manager.py拷贝到本地doc_manaers目录<br/>
-继续执行之前命令，然后继续报错
+执行之前命令，发现继续报错~
 <pre>
 IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/doc_managers/mongo-connector.log'
 </pre>
