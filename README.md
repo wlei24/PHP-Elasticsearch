@@ -108,3 +108,4 @@ IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_
 <pre>
 1.遇到问题时，没有仔细查看错误信息。
 2.英文能力有待提高。
+</pre>
