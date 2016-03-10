@@ -36,8 +36,10 @@ $ ./mongod
 sudo ./mongod --dbpath /Users/wlei24/es/mongodb-osx-x86_64-3.0.0/data/db/ --rest
 后面运行时可能出现ERROR：dbpath (/data/db) does not exist.
 这是由于mongod启动时没有找到mongodb.conf导致的，因此我们的启动mongodb的时候手动添加 --dbpath即可
+</pre>
 #####5. 测试mongodb运行情况
-<pre>进入bin目录，运行./mongo进入mongodb控制台，输入
+<pre>
+进入bin目录，运行./mongo进入mongodb控制台，输入
 $ show dbs
 显示结果：
 article  0.078GB
