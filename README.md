@@ -2,7 +2,7 @@
 一套全文检索解决方案，涉及到的技术有elasticsearch、mongodb、php等。<br/>
 具体流程：<br/>
 1. PHP程序添加文章写入Mongodb中。<br/>
-2. 通过mongodb-connector同步输入到elasticsearch中。<br/>
+2. 通过mongodb-connector同步Mongodb数据到elasticsearch中。<br/>
 3. PHP程序([elasticsearch-php](https://github.com/elastic/elasticsearch-php))全文检索elasticsearch。<br/>
 ## Elasticsearch准备
 #####1. 安装新版 <a href="http://www.java.com" target="_blank">java环境</a><br/>
@@ -88,8 +88,8 @@ Traceback (most recent call last):
 mongo_connector.errors.InvalidConfiguration: Could not import mongo_connector.doc_managers.elastic_doc_manager. It could be that this doc manager has been moved out of this project and is maintained elsewhere. Make sure that you have the doc manager installed alongside mongo-connector. Check the README for a list of available doc managers.
 </pre>
 <pre>
-花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的错误提示-没有找到elastic_doc_manager<br/>
-不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir<br/>
+花了大半天没有解决问题，怪自己没仔细看错误输出，偌大的错误提示-没有找到elastic_doc_manager
+不过感觉mongodb-connector也有点坑，默认doc_managers里面只有solr_doc_manageir
 </pre>
 这时就需要你去[elastic2-doc-manager](https://github.com/mongodb-labs/elastic2-doc-manager)<br/>
 将elastic2-doc-manager.py拷贝到本地doc_manaers目录<br/>
