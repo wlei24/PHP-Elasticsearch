@@ -1,0 +1,2 @@
+[2016-03-08 08:59:42] ES.WARNING: test {"name":"wlei"} []
+[2016-03-08 08:59:42] ES.ERROR: getTopicList Exception:  {"ERROR_CODE":"222","ERROR_STRING":"错误错误"} []
