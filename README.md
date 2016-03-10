@@ -1,5 +1,5 @@
 # PHP-Elasticsearch
-一套全文检索解决方案，涉及到的技术有elasticsearch、mongodb、php等。<br/>
+一套全文检索解决方案，涉及到的技术有elasticsearch、mongodb、php、monolog等。<br/>
 具体流程：<br/>
 1. PHP程序添加文章写入Mongodb中。<br/>
 2. 通过mongodb-connector同步Mongodb数据到elasticsearch中。<br/>
