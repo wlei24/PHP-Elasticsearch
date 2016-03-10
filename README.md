@@ -93,7 +93,8 @@ mongo_connector.errors.InvalidConfiguration: Could not import mongo_connector.do
 IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_connector-2.3-py2.7.egg/mongo_connector/doc_managers/mongo-connector.log'
 </pre>
 这个错误只需要根据报错信息，新建此文件，并赋予读写权限即可。<br/>
-继续执行之前命令，惊奇发现已经显示正常迹象，不过随即退出。解决此问题只需采用在命令前面加上`sudo`即可(意思你懂得~)
+继续执行之前命令，惊奇发现已经显示正常迹象，不过随即退出。<br/>
+解决此问题只需采用在命令前面加上`sudo`即可(意思你懂得~)
 <pre>Logging to mongo-connector.log.</pre>
 
 ## 总结
