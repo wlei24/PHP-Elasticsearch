@@ -102,6 +102,13 @@ IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_
 解决此问题只需采用在命令前面加上`sudo`即可(意思你懂得~)
 <pre>Logging to mongo-connector.log.</pre>
 
+## 实际效果
+![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es.png)
+![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-1.png)
+![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-2.png)
+![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-3.png)
+![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-4.png)
+
 #####<b>参考资料：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>、[mongo-connector](https://github.com/mongodb-labs/mongo-connector/blob/master/README.rst)、[MongoDB 数据自动同步到 ElasticSearch](https://segmentfault.com/a/1190000003773614)
 
 ## 总结
