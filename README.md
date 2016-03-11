@@ -109,7 +109,7 @@ IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_
 [搜索文章标题效果](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-1.png)、
 [搜索文章内容效果](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-2.png)
 <br/><br/>
-####<b>参考资料：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>、[mongo-connector](https://github.com/mongodb-labs/mongo-connector/blob/master/README.rst)、[MongoDB 数据自动同步到 ElasticSearch](https://segmentfault.com/a/1190000003773614)
+####<b>参考资料：<a href="https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details" target="_blank">Elasticsearch权威指南</a></b>、[mongo-connector](https://github.com/mongodb-labs/mongo-connector/blob/master/README.rst)、[MongoDB 数据自动同步到 ES](https://segmentfault.com/a/1190000003773614)
 
 ## 总结
 <pre>
