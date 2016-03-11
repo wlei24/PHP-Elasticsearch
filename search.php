@@ -38,7 +38,6 @@
 
                 try{
                     $es = new Elasticsearch\Client($config['es']);
-
                     $params['index'] = 'article';
                     $params['type'] = 'article';
                     $params['body']['query']['match'][$type] = $searchword;
@@ -47,11 +46,11 @@
                     $params['body']['highlight']['post_tags'] = array("<span style='color:#000;font-weight: normal;font-size: 14px;'>","</span>");
                     $result = $es->search($params);
                 } catch(Exception $e){
-                    echo $e->getMessage();
+                    echo '<pre>System error：'.$e->getMessage().'</pre>';
                     exit;
                 }
 
-               $result = $result['hits'];
+                $result = $result['hits'];
 
                 if($result['total'] == 0){
                     echo 'no result';
@@ -77,7 +76,6 @@
                     }
 
                 }
-
 
             }
         ?>
