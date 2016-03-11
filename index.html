@@ -1,9 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Add Article</title>
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <script src="./lib/jquery.min.js"></script>
+    <style>
+        .container{padding: 50px;font-size: 15px;}
+        input{width: 500px;height: 50px;line-height: 50px;padding: 0 10px;outline: none;border-radius:5px;border: 1px solid #d3d3d3;}
+        textarea{width: 500px;height: 250px;border:1px solid #d3d3d3;padding: 10px 10px;outline: none;border-radius: 5px;}
+        .form-horizontal .form-group{margin-left: 0;}
+        button{width: 500px;height: 40px;}
+    </style>
 </head>
 <body>
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="title"></label>
+                <input type="text" id="title" placeholder="please input title"/>
+            </div>
+            <div class="form-group">
+                <label for="content"></label>
+                <textarea id="content" placeholder="please input content"></textarea>
+            </div>
+            <button type="button" id="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+
+    <script>
+        $('#submit').click(function(){
+            var title = $('#title').val();
+            var content = $('#content').val();
+
+            $("#submit").attr("disabled","false");
+
+            if(title.trim() == "" || content.trim() == ""){
+                console.log("title or content is null");
+                return;
+            }
+
+            $.ajax({
+                url:'./addArticle.php',
+                type:'POST',
+                data:{'title':title,'content':content},
+                success:function(data){
+                    console.log(data);
+                    if(data == 'ok'){
+                        console.log('add success');
+                    } else {
+                        console.log('add error');
+                    }
+                    $("#submit").removeAttr("disabled");
+                },
+                error:function(data){
+                    console.log(data);
+                    console.log('add error');
+                    $("#submit").removeAttr("disabled");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
