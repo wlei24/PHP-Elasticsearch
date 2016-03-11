@@ -105,9 +105,10 @@ IOError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/mongo_
 ## 实际效果
 添加文章效果图
 ![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es.png)
-mongodb存储文章形式
+Mongodb存储文章形式
 ![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-4.png)
-elasticsearch存储文章形式
+<br/>
+Elasticsearch存储文章形式
 ![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-3.png)
 搜索文章标题效果
 ![](https://github.com/wlei24/PHP-Elasticsearch/blob/master/lib/images/es-1.png)
